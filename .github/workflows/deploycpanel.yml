@@ -3,7 +3,7 @@ name: Deploy to FTP
 on:
   push:
     branches:
-      - main  
+      - main  # Trigger deployment on push to the main branch
 
 jobs:
   deploy:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Checkout the code from the repository
+        uses: actions/checkout@v3  # Ensure compatibility with Node.js 20
 
       - name: Install lftp
         run: sudo apt-get install lftp  # Install lftp for FTP operations
