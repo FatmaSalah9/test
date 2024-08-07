@@ -29,6 +29,7 @@ jobs:
           REMOTE_DIR: /path/to/remote/directory  # Adjust as needed
         run: |
           lftp -f "
+          set ssl:verify-certificate no  # Disable certificate verification
           open $FTP_HOST
           user $FTP_USER $FTP_PASS
           mirror --reverse --delete --verbose ./ $REMOTE_DIR
