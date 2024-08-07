@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16  # Explicitly set Node.js version to 16 to ensure compatibility
+          node-version: '20'  # Explicitly set Node.js version to 20
 
       - name: Install lftp
         run: sudo apt-get install lftp  # Install lftp for FTP operations
